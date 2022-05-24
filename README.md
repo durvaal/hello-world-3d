@@ -2,6 +2,10 @@
 
 Try Hello World 3D with Three.js and Vue.js :]
 
+## Demo
+
+Access the demo [hello-world-3d.vercel.app](hello-world-3d.vercel.app) :tada:
+
 ## Project setup
 ```
 yarn install
@@ -22,5 +26,4 @@ yarn build
 yarn lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## See you later 🤝
