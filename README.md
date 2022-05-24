@@ -4,7 +4,7 @@ Try Hello World 3D with Three.js and Vue.js :]
 
 ## Demo
 
-Access the demo [hello-world-3d.vercel.app](hello-world-3d.vercel.app) :tada:
+Access the demo [https://hello-world-3d.vercel.app/](https://hello-world-3d.vercel.app/) :tada:
 
 ## Project setup
 ```
