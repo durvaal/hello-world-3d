@@ -1,4 +1,6 @@
-# hello-world-3d
+# Hello World 3D
+
+Try Hello World 3D with Three.js and Vue.js :]
 
 ## Project setup
 ```
