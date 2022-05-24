@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div id="HelloWorld">
   </div>
 </template>
 
@@ -31,10 +31,10 @@ export default {
     },
     createCamera() {
       // Initialize camera
-      this.camera = new THREE.PerspectiveCamera(30, window.innerHeight / window.innerHeight, 0.1, 10);
+      this.camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1);
 
       // Reposition camera
-      this.camera.position.set(6, 0, 0);
+      this.camera.position.set(5, 0, 0);
     },
     createRenderer() {
       // Initialize renderer
@@ -45,9 +45,6 @@ export default {
 
       // Set renderer size
       this.renderer.setSize(window.innerWidth, window.innerHeight);
-    
-      // set the pixel ratio (for mobile devices)
-      this.renderer.setPixelRatio(window.devicePixelRatio);
 
       // Append renderer to body
       this.container.appendChild(this.renderer.domElement);
@@ -75,7 +72,6 @@ export default {
       this.scene.add(this.mesh);
     },
     updateRendererSize() {
-      console.log("aqui ", window.innerWidth);
       // Update camera aspect
       this.camera.aspect = window.innerWidth / window.innerHeight;
 
@@ -84,9 +80,6 @@ export default {
 
       // Resize renderer
       this.renderer.setSize(window.innerWidth, window.innerHeight);
-    
-      // set the pixel ratio (for mobile devices)
-      this.renderer.setPixelRatio(window.devicePixelRatio);
     },
     createOnWindowResize() {
       window.addEventListener("resize", () => this.updateRendererSize());
@@ -98,9 +91,11 @@ export default {
     animate() {
       // Request animation frame
       window.requestAnimationFrame(this.animate);
+
+      this.updateRendererSize();
       
       // Rotate world
-      this.mesh.rotation.y += 0.0005;
+      this.mesh.rotation.y += 0.0010;
 
       // Render scene
       this.renderer.render(this.scene, this.camera);
@@ -120,9 +115,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.hello {
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at center, white, rgba(113,129,191,0.5) 50%);
-}
 </style>
